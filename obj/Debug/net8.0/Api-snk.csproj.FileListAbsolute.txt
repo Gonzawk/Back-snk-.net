@@ -168,3 +168,4 @@ D:\Program Filess (x86)\Proyects\api-snk\Api-snk\bin\Debug\net8.0\zh-Hant\Micros
 D:\Program Filess (x86)\Proyects\api-snk\Api-snk\bin\Debug\net8.0\runtimes\unix\lib\net8.0\Microsoft.Data.SqlClient.dll
 D:\Program Filess (x86)\Proyects\api-snk\Api-snk\bin\Debug\net8.0\runtimes\win\lib\net8.0\Microsoft.Data.SqlClient.dll
 D:\Program Filess (x86)\Proyects\api-snk\Api-snk\bin\Debug\net8.0\runtimes\win\lib\net8.0\System.Runtime.Caching.dll
+D:\Program Filess (x86)\Proyects\api-snk\Api-snk\obj\Debug\net8.0\Api-snk.sourcelink.json

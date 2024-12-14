@@ -23,16 +23,24 @@ builder.Services.AddControllers();
 
 // Configuración de Swagger
 builder.Services.AddEndpointsApiExplorer();
-builder.Services.AddSwaggerGen();
+builder.Services.AddSwaggerGen(options =>
+{
+    options.SwaggerDoc("v1", new Microsoft.OpenApi.Models.OpenApiInfo
+    {
+        Title = "API de Productos",
+        Version = "v1",
+        Description = "Una API para gestionar productos y categorías"
+    });
+});
 
 // Configuración de CORS
 builder.Services.AddCors(options =>
 {
-    options.AddPolicy("AllowAllOrigins", policy =>
+    options.AddPolicy("AllowSpecificOrigins", policy =>
     {
-        policy.AllowAnyOrigin()  // Permite todas las direcciones de origen
-              .AllowAnyMethod()  // Permite todos los métodos HTTP (GET, POST, PUT, DELETE, etc.)
-              .AllowAnyHeader(); // Permite cualquier encabezado
+        policy.WithOrigins("https://frontendd-snk.vercel.app/", "https://frontendd-snk.vercel.app")  // Especifica los orígenes
+              .AllowAnyMethod()
+              .AllowAnyHeader();
     });
 });
 
@@ -48,7 +56,7 @@ builder.Services.Configure<RequestLocalizationOptions>(options =>
 var app = builder.Build();
 
 // Usar el middleware de CORS
-app.UseCors("AllowAllOrigins");
+app.UseCors("AllowSpecificOrigins");
 
 if (app.Environment.IsDevelopment())
 {
