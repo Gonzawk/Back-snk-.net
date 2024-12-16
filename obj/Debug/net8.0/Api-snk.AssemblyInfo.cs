@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("Api-snk")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+4ea513627886fd3e5bef301966a8fe186aa32b26")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+9875bd29811e2ea881eda3d4ae2f48ed4dde7c2f")]
 [assembly: System.Reflection.AssemblyProductAttribute("Api-snk")]
 [assembly: System.Reflection.AssemblyTitleAttribute("Api-snk")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

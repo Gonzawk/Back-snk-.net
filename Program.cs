@@ -53,6 +53,9 @@ builder.Services.Configure<RequestLocalizationOptions>(options =>
     options.SupportedUICultures = supportedCultures.Select(c => new CultureInfo(c)).ToList();
 });
 
+// Configuración del servidor para escuchar en el puerto 5201
+builder.WebHost.UseUrls("http://0.0.0.0:5201");
+
 var app = builder.Build();
 
 // Usar el middleware de CORS
