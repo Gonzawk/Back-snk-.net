@@ -18,5 +18,5 @@ RUN dotnet publish -c Release -o out
 # Build image / Construir la imagen 
 FROM mcr.microsoft.com/dotnet/sdk:6.0
 WORKDIR /apiweb
-COPY  --from=build /apiweb/out
+COPY  --from=build /apiweb/out .
 ENTRYPOINT ["dotnet","Api-snk.dll"]
