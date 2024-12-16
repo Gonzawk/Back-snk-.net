@@ -1,5 +1,5 @@
 # Usamos la imagen oficial de .Net sdk para compilar el proyecto 
-FROM mcr.microsoft.com/dotnet/sdk:6.0 AS build
+FROM mcr.microsoft.com/dotnet/sdk:8.0 AS build
 WORKDIR apiweb
 # Aplicamos un nombre a la aplicacion
 
@@ -16,7 +16,7 @@ COPY . .
 RUN dotnet publish -c Release -o out
 
 # Build image / Construir la imagen 
-FROM mcr.microsoft.com/dotnet/sdk:6.0
+FROM mcr.microsoft.com/dotnet/sdk:8.0
 WORKDIR /apiweb
 COPY  --from=build /apiweb/out .
 ENTRYPOINT ["dotnet","Api-snk.dll"]
